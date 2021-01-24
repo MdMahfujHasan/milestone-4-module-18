@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 onclick="handleClick()">checking out events in js</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quisquam quaerat reiciendis culpa labore, dolorem nemo accusantium explicabo ipsa veritatis!</p>
+    <p>Alias eveniet labore nesciunt numquam, tempore asperiores eius repellendus, excepturi tempora in nisi odit aliquid cupiditate laboriosam voluptates debitis accusantium?</p>
+    <p>Assumenda, perspiciatis ducimus odio, ut totam natus eaque rem consectetur minima eveniet praesentium provident ad perferendis dolorem, blanditiis porro est.</p>
+    <p>Numquam culpa iste excepturi dolore laborum, expedita alias molestias facilis autem, nihil recusandae unde nobis optio quos nam, amet beatae.</p>
+    <!-- <button onclick="handleClick()">click me</button>
+    <button onmouseover="handleClick()">click me</button>
+    <script>
+        function handleClick(){
+            console.log('someone clicked me');
+            console.log(new Date);
+        }
+    </script> -->
+    <button>click-me-1</button>
+    <button id="second">click-me-2</button>
+    <button>click-me-3</button>
+    <button id="fourth">click-me-4</button>
+    <script>
+        function handleClick(){
+            document.body.style.backgroundColor = 'lightblue';
+        }
+        const secondButton = document.getElementById('second');
+        secondButton.onclick = handleClick;
+        secondButton.addEventListener('click', handleClick);
+        document.getElementById('fourth').addEventListener('click', function(){
+            document.body.style.color = 'blue';
+        })
+    </script>
+</body>
+</html>
